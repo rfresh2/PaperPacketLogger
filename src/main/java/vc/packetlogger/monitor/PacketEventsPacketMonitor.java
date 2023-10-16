@@ -8,13 +8,14 @@ import com.github.retrooper.packetevents.wrapper.play.client.WrapperPlayClientPo
 import com.github.retrooper.packetevents.wrapper.play.server.WrapperPlayServerPing;
 import org.slf4j.Logger;
 
-import java.util.concurrent.LinkedBlockingQueue;
+import java.util.concurrent.ConcurrentLinkedQueue;
 
 import static org.slf4j.LoggerFactory.getLogger;
 
 public class PacketEventsPacketMonitor implements PacketListener {
     private static final Logger LOGGER = getLogger(PacketEventsPacketMonitor.class);
-    private final LinkedBlockingQueue<PacketEvent> events = new LinkedBlockingQueue<>();
+
+    private final ConcurrentLinkedQueue<PacketEvent> events = new ConcurrentLinkedQueue<>();
 
     public PacketEventsPacketMonitor() {
         super();
