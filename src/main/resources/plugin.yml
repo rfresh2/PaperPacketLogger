@@ -2,13 +2,17 @@ main: ${PACKAGE}.${NAME}
 name: ${NAME}
 version: "${VERSION}"
 api-version: "1.16"
-author: AUTHOR
-description: DESCRIPTION
+author: rfresh2
+description: Paper packet logger
 commands:
-  ex:
-    description: Base command for EXAMPLE
-    usage: "For a list of commands, type /ex help"
-    aliases: example
+  pls:
+    description: Start packetlogging
+    usage: "pls"
+    aliases: packetlogstart
+  ple:
+    description: End packetlogging
+    usage: "ple"
+    aliases: packetlogend
 permissions:
   example.test:
     description: DESCRIPTION
@@ -18,3 +22,12 @@ permissions:
     default: false
     children:
       example.test: true
+depend:
+  - ProtocolLib
+  - packetevents
+softdepend:
+  - ProtocolSupport
+  - ViaVersion
+  - ViaBackwards
+  - ViaRewind
+  - Geyser-Spigot
