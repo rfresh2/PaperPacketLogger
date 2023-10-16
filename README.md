@@ -4,8 +4,8 @@ A simple plugin that will capture and print all packets received and sent to the
 
 ## Commands
 
-* '/pls' -> start capturing
-* '/ple' -> stop capturing and log
+* `/pls` -> start capturing
+* `/ple` -> stop capturing and log
 
 ## Limitations
 
@@ -14,7 +14,7 @@ A simple plugin that will capture and print all packets received and sent to the
   * Logs only the packet name, time, and direction.
 * Only intended to be used on a server with a single player
   * Does not associate packets with players
-* To test with GrimAC you'll want to change the GrimAC `PingPacketListener` priority to `NORMAL` so it'll actually capture ping packets.
+* To test with GrimAC you'll want to change the GrimAC `PingPacketListener` priority to `NORMAL` so you can actually capture ping packets.
   * Requires code changes in Grim and you building Grim yourself
 
 # Requirements/Dependencies
