@@ -13,21 +13,5 @@ commands:
     description: End packetlogging
     usage: "ple"
     aliases: packetlogend
-permissions:
-  example.test:
-    description: DESCRIPTION
-    default: true
-  example.*:
-    description: Grants all other permissions
-    default: false
-    children:
-      example.test: true
 depend:
-  - ProtocolLib
   - packetevents
-softdepend:
-  - ProtocolSupport
-  - ViaVersion
-  - ViaBackwards
-  - ViaRewind
-  - Geyser-Spigot
